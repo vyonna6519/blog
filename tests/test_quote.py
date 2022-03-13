@@ -6,11 +6,11 @@ class TestQuote(unittest.TestCase):
         """
         Set up method that will run before every Test
         """
-        self.random_quote = Quote("Victor Kibocha", "Trust Nobody")
+        self.random_quote = Quote("Vyonna Njenga", "Trust Nobody")
 
     def test_instance(self):
         self.assertTrue(isinstance(self.random_quote, Quote))
 
     def test_init(self):
-        self.assertEqual(self.random_quote.author, "Victor Kibocha")
+        self.assertEqual(self.random_quote.author, "Vyonna Njenga")
         self.assertEqual(self.random_quote.quote,"Trust Nobody")
