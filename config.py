@@ -1,26 +1,27 @@
 import os 
 
 class Config:
-    SECRET_KEY = b'&/\xf8>\x13[\xcd8\xf1S4\x8b\xf0\xa0F\xb3c\x96\x9c\x05\xcb\xc6/#\x0c\xb1)\xe1\xde\x89\x9d\xce'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:moringa@localhost/myblog'
+    SECRET_KEY =  '562af35a9b244efba09ef9e1a482d134x9'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:vyonna6519@localhost/myblog'
     UPLOADED_PHOTOS_DEST = "app/static/photos"
 
     # email configurations
     MAIL_SERVER = "smtp.gmail.com"
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    MAIL_USERNAME = 'vyonna.njenga@student.moringaschool.com'
+    MAIL_PASSWORD = 'vyonnamoringa6519'
 
 class ProdConfig(Config):
     
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL','')
-    if SQLALCHEMY_DATABASE_URI.startswith('postgres://'):
-        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres://', "postgresql://", 1)
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    if SQLALCHEMY_DATABASE_URI and SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+       SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
+    pass 
 
 class TestConfig(Config):
     
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:vyonna6519@localhost/blog_test"
+    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:vyonna6519@localhost/myblog"
 
 class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:vyonna6519@localhost/myblog"
