@@ -4,10 +4,13 @@ the application displays random quotes to inspire users.
 
 
 ## Screenshot
+Home
 ![Screenshot from 2022-03-14 20-22-42](https://user-images.githubusercontent.com/93370913/158226691-c408f306-e5f6-430c-a643-7977b9bcd45d.png)
 
+Log In
 ![Screenshot from 2022-03-14 20-23-11](https://user-images.githubusercontent.com/93370913/158226716-766a02e2-dc6d-4305-9cf9-2f3f42a1f8f5.png)
 
+Sign Up
 ![Screenshot from 2022-03-14 20-23-15](https://user-images.githubusercontent.com/93370913/158226799-a26f3ca2-9086-4e78-9566-1b28a5702f6d.png)
 
 
